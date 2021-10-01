@@ -1,0 +1,21 @@
+---
+- hosts: ubuntu
+  vars_files:
+          - ./config.yaml
+ 
+  roles:
+    - elastic1
+    - nagios
+    - nagios2
+    - nagios3
+    - grafana
+    - lamp1
+
+- hosts: centos
+
+  roles:
+    - elastic2
+    - grafana2
+    - lamp2
+
+          
